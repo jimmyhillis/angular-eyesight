@@ -2,6 +2,14 @@
 
 Directives to set the focus and blur of an element based on an angular expression.
 
+## Installation
+
+In your project directory
+
+```bash
+bower install angular-eyesight --save
+```
+
 ## Usage
 
 Include eyesight module within your code:
