@@ -1,0 +1,25 @@
+{
+  "name": "angular-eyesight",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jimmyhillis/angular-eyesight",
+  "authors": [
+    "Jimmy Hillis <jimmy@hillis.me>"
+  ],
+  "description": "Directives to set the focus and blur of an element based on an angular expression.",
+  "main": "angular-eyesight.js",
+  "keywords": [
+    "angularjs",
+    "angular",
+    "focus",
+    "blur",
+    "directive"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
