@@ -1,6 +1,6 @@
 {
   "name": "angular-eyesight",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Directives to set the focus and blur of an element based on an angular expression.",
   "main": "angular-eyesight.js",
   "dependencies": {},
