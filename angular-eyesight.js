@@ -12,12 +12,12 @@ var eyesight = angular.module('eyesight', []);
  * @param {string=} Expression which, when true, sets focus to this element.
  */
 eyesight.directive('focusIf', ['$timeout', function ($timeout) {
-    return function ( scope, element, attr ) {
+    return function (scope, element, attr) {
         scope.$watch(attr.focusIf, function (newVal) {
             if (newVal) {
                 $timeout(function () {
                     element[0].focus();
-                }, 0 );
+                }, 0);
             }
         });
     };
@@ -35,12 +35,12 @@ eyesight.directive('focusIf', ['$timeout', function ($timeout) {
  * @param {string=} Expression which, when true, will blur this element
  */
 eyesight.directive('blurIf', ['$timeout', function ($timeout) {
-    return function ( scope, element, attr ) {
+    return function (scope, element, attr) {
         scope.$watch(attr.blurIf, function (newVal) {
             if (newVal) {
                 $timeout(function () {
                     element[0].blur();
-                }, 0 );
+                }, 0);
             }
         });
     };

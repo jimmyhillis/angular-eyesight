@@ -1,26 +1,24 @@
 /**
- * Gulp (http://gulpjs.com) file used to run tasks.
- * After Gulp is installed, run "gulp" and angular-eyesight.js will be minified to angular-eyesight.min.js
+ * Gulp build
+ *
+ * Default build for development will watch and minify each change
+ * of angular-eyesight.
  */
-var gulp = require('gulp'),
-    rename = require('gulp-rename'),
-    uglify = require('gulp-uglify');
+
+var gulp = require('gulp');
+var jshint = require('gulp-jshint');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
 
 gulp.task('js', function() {
-  gulp
-    .src('angular-eyesight.js')
-    .pipe(uglify())
-    .pipe(rename('angular-eyesight.min.js'))
-    .pipe(gulp.dest('.'));
+    gulp.src('angular-eyesight.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'))
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('.'));
 });
 
-function changeNotification(event) {
-  console.log('File', event.path, 'was', event.type, ', running tasks...');
-}
-
-function watch() {
-  gulp.watch('angular-eyesight.js', ['js']).on('change', changeNotification);
-}
-
-gulp.task('all', ['js']);
-gulp.task('default', ['all'], watch);
+gulp.task('default', ['js'], function () {
+    gulp.watch('angular-eyesight.js', ['js']);
+});

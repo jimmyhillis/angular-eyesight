@@ -7,12 +7,13 @@
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^0.3.1"
+    "gulp-uglify": "^0.3.1",
+    "gulp-jshint": "^1.7.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jimmyhillis/angular-eyesight"
   },
-  "author": "",
+  "author": "Jimmy Hillis <jimmy@hillis.me> (http://jimmyhillis.com)",
   "license": "MIT"
 }
